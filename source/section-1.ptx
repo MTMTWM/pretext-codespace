@@ -11,7 +11,7 @@
   </exercise>
 </exercises>
   <subsection xml:id="subsection-1">
-    <exercise xml:id="ex-1">
+    <!-- <exercise xml:id="ex-1">
       <statement>
         <p>Prove that if <m>a \equiv b\pmod{n}</m> and <m>c\equiv d\pmod{n}</m>, then <m>ac\equiv bd\pmod{n}</m>.</p>
       </statement>
@@ -73,7 +73,7 @@ Therefore, <m>n|ac-bd</m>, showing that <m>ac \equiv bd \pmod{n}</m>.</p>
            <m>a</m> satisfies <m>p\le a\le\sqrt{n}</m> and therefore divides
            <m>n</m>.</p>
       </solution>
-    </exercise>
+    </exercise> -->
     <!-- comment removed -->
   </subsection>
 </section>

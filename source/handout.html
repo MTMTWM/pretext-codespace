@@ -1,4 +1,66 @@
-<handout>
+<worksheet>
 <title> Midterm with Solutions </title>
+<exercise xml:id="ex-1">
+      <statement>
+        <p>Prove that if <m>a \equiv b\pmod{n}</m> and <m>c\equiv d\pmod{n}</m>, then <m>ac\equiv bd\pmod{n}</m>.</p>
+      </statement>
+      <solution>
+        <p>If <m>a \equiv b \pmod{n}</m>, then <m>n | (a-b)</m>, write <m>nk = a-b</m>.
+If <m>c \equiv d \pmod{n}</m>, then <m>n | (c-d)</m>, write <m>nm = c-d</m>.
+Thus, <m>ac = (b+nk)(d+nm) = bd+bnm+dnk+n^2mk = bd+n(mb+dk+nmk)</m>. 
+Therefore, <m>n|ac-bd</m>, showing that <m>ac \equiv bd \pmod{n}</m>.</p>
+      </solution>
+    </exercise>
 
-</handout>
+    <exercise xml:id="ex-2">
+      <statement>
+        <p>Prove that if <m>n&gt;2</m>, then there exists a prime <m>p</m> satisfying <m>n&lt;p&lt;n!</m>. (Hint: Consider the number <m>n!-1</m>.)</p>
+      </statement>
+      <solution>
+        <p><m>n!-1&lt;n!</m> always holds and since <m>n&gt;2</m>, <m>n! \ge 2n &gt; n+1</m> so that <m>n!-1&gt;n</m>. In particular, <m>n&lt;n!-1&lt;n!</m> for all <m>n&gt;2</m>. If <m>n!-1</m> is prime, we are done. If not, then by the FToA it has a prime factorization and each of those primes must be greater than <m>n</m> (or it would divide <m>n!</m> and <m>n!-1</m>, an impossibility). Those primes must also be less than <m>n!</m> because they divide <m>n!-1</m>. Hence each of those primes lie between <m>n</m> and <m>n!</m>.</p>
+      </solution>
+    </exercise>
+    <exercise xml:id="ex-3">
+      <statement>
+        <p>Show your Euclidean Algorithm skills by using it to find <m>\gcd(63,23)</m>. Then use the algorithm to write <m>\gcd(63,23)</m> as a linear combination of 63 and 23.</p>
+      </statement>
+      <solution>
+        <p><m>63 = 2\cdot 23 + 17</m></p>
+        <p><m>23 = 1\cdot 17 + 6</m></p>
+        <p><m>17 = 2\cdot 6 + 5</m></p>
+        <p><m>6 = 1\cdot 5 + 1</m></p>
+        <p><m>5 = 5\cdot 1 + 0</m></p>
+        <p>Thus <m>\gcd(63,23)=1</m>. Back‑substituting gives</p>
+        <p><m>1 = 11\cdot 23 - 4\cdot 63</m></p>
+      </solution>
+    </exercise>
+    <exercise xml:id="ex-4">
+      <statement>
+        <p>Let <m>n = p_1^{e_1} p_2^{e_2} \cdots p_k^{e_k}</m> be the prime factorization of <m>n</m>. How many positive divisors does <m>n</m> have? Explain your answer.</p>
+      </statement>
+      <solution>
+        <p>A divisor of <m>n</m> must be of the form <m>p_1^{f_1} p_2^{f_2} \cdots p_k^{f_k}</m>, where <m>0 \le f_i \le e_i</m> for each <m>i=1,2,\dots,k</m>. There are <m>e_i+1</m> choices for each <m>f_i</m>. Therefore, the total number of divisors is <m>(e_1+1)(e_2+1)\cdots(e_k+1)</m>.</p>
+      </solution>
+    </exercise>
+    <exercise xml:id="ex-5">
+      <statement>
+        <p>Prove that if <m>\gcd(a,b) = 1</m> then <m>\gcd(a+b,ab) = 1</m>.</p>
+      </statement>
+      <solution>
+        <p><em>(Prime solution:)</em> If <m>ab = 1</m> we are done because <m>\gcd(a+b,ab) = \gcd(a+b,1) = 1</m>. If <m>ab \ne 1</m>, let <m>p</m> be a prime dividing <m>ab</m>. By Theorem 2.27, <m>p|a</m> or <m>p|b</m>. Note that <m>p</m> cannot divide both <m>a</m> and <m>b</m> since <m>\gcd(a,b)=1</m>. In particular, <m>p \nmid a+b</m>. Therefore <m>p</m> is not a prime divisor of <m>\gcd(a+b,ab)</m>. Since no prime dividing <m>ab</m> divides <m>a+b</m>, we have <m>\gcd(a+b,ab) = 1</m>.
+</p>
+        <p><em>(Non-prime way:)</em> <m>\gcd(a+b,a) = 1</m> because any common divisor of <m>a</m> and <m>a+b</m> must divide <m>b</m>. Similarly, <m>\gcd(a+b,b) = 1</m>. Therefore, by Theorem 2.28, <m>\gcd(a+b,ab) = \gcd(a+b,a)\cdot \gcd(a+b,b) = 1</m>.</p>
+      </solution>
+    </exercise>
+    <exercise xml:id="ex-6">
+      <statement>
+        <p>Show that if <m>n</m> is composite, then <m>n</m> has a prime divisor less than or equal to <m>\sqrt{n}</m>.</p>
+      </statement>
+      <solution>
+        <p>Write <m>n=ab</m> with integers <m>1&lt;a\le b</m>. Then
+           <m>a^2\le n</m>, so <m>a\le\sqrt{n}</m>. Any prime divisor <m>p</m> of
+           <m>a</m> satisfies <m>p\le a\le\sqrt{n}</m> and therefore divides
+           <m>n</m>.</p>
+      </solution>
+    </exercise>
+</worksheet>
