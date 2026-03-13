@@ -13,4 +13,8 @@
 
         <!--<journal name="ams" /> -->
     </common>
+
+    <web>
+        <solutions knowl="no" />
+    </web>
 </publication>

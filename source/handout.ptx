@@ -7,7 +7,7 @@
       <solution>
         <p>If <m>a \equiv b \pmod{n}</m>, then <m>n | (a-b)</m>, write <m>nk = a-b</m>.
 If <m>c \equiv d \pmod{n}</m>, then <m>n | (c-d)</m>, write <m>nm = c-d</m>.
-Thus, <m>ac = (b+nk)(d+nm) = bd+bnm+dnk+n^2mk = bd+n(mb+dk+nmk)</m>. 
+Thus, <m>ac = (b+nk)(d+nm) = bd+bnm+dnk+n^2mk</m><m> = bd+n(mb+dk+nmk)</m>. 
 Therefore, <m>n|ac-bd</m>, showing that <m>ac \equiv bd \pmod{n}</m>.</p>
       </solution>
     </exercise>
@@ -49,7 +49,9 @@ Therefore, <m>n|ac-bd</m>, showing that <m>ac \equiv bd \pmod{n}</m>.</p>
       <solution>
         <p><em>(Prime solution:)</em> If <m>ab = 1</m> we are done because <m>\gcd(a+b,ab) = \gcd(a+b,1) = 1</m>. If <m>ab \ne 1</m>, let <m>p</m> be a prime dividing <m>ab</m>. By Theorem 2.27, <m>p|a</m> or <m>p|b</m>. Note that <m>p</m> cannot divide both <m>a</m> and <m>b</m> since <m>\gcd(a,b)=1</m>. In particular, <m>p \nmid a+b</m>. Therefore <m>p</m> is not a prime divisor of <m>\gcd(a+b,ab)</m>. Since no prime dividing <m>ab</m> divides <m>a+b</m>, we have <m>\gcd(a+b,ab) = 1</m>.
 </p>
-        <p><em>(Non-prime way:)</em> <m>\gcd(a+b,a) = 1</m> because any common divisor of <m>a</m> and <m>a+b</m> must divide <m>b</m>. Similarly, <m>\gcd(a+b,b) = 1</m>. Therefore, by Theorem 2.28, <m>\gcd(a+b,ab) = \gcd(a+b,a)\cdot \gcd(a+b,b) = 1</m>.</p>
+        <p><em>(Non-prime way:)</em> <m>\gcd(a+b,a) = 1</m> because any common divisor of <m>a</m> and <m>a+b</m> 
+          must divide <m>b</m>. Similarly, <m>\gcd(a+b,b) = 1</m>. Therefore, by Theorem 2.28, 
+          <m>\gcd(a+b,ab) = \gcd(a+b,a)\cdot \gcd(a+b,b) = 1\cdot 1 = 1</m>.</p>
       </solution>
     </exercise>
     <exercise xml:id="ex-6">
@@ -59,8 +61,26 @@ Therefore, <m>n|ac-bd</m>, showing that <m>ac \equiv bd \pmod{n}</m>.</p>
       <solution>
         <p>Write <m>n=ab</m> with integers <m>1&lt;a\le b</m>. Then
            <m>a^2\le n</m>, so <m>a\le\sqrt{n}</m>. Any prime divisor <m>p</m> of
-           <m>a</m> satisfies <m>p\le a\le\sqrt{n}</m> and therefore divides
-           <m>n</m>.</p>
+           <m>a</m> satisfies <m>p\le a\le\sqrt{n}</m> and since <m>a</m> divides <m>n</m>, <m>p</m> also divides <m>n</m>.</p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="ex-7">
+      <statement>
+        <p>Prove that there are infinitely many prime numbers. (You may use Euclid's proof.)</p>
+      </statement>
+      <solution>
+        <p>Assume there are finitely many primes, <m>p_1, p_2, \dots, p_k</m>. Let <m>N = p_1 p_2 \cdots p_k + 1</m>. 
+          Since 2 is a prime the list of primes is not empty and <m>N &gt; 1</m>, <m>N</m> must be divisible by some prime by Theorem 2.1. But <m>N</m> is not divisible by any of <m>p_1, p_2, \dots, p_k</m>, because dividing <m>N</m> by any of these gives a remainder of 1. Therefore, <m>N</m> must be divisible by a prime not in the list <m>p_1, p_2, \dots, p_k</m>, contradicting the assumption that we have a complete list of primes. Hence, there must be infinitely many primes.</p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="ex-8">
+      <statement>
+        <p>Find the canonical residue of <m>19^{53} \pmod{11}</m>.</p>
+      </statement>
+      <solution>
+        <p><m>19 \equiv 8 \pmod{11}</m>, <m>19^2 = 64 \equiv -2 \pmod{11}</m>, <m>19^4 \equiv 4 \pmod{11}</m>, <m>19^8 \equiv 5 \pmod{11}</m>, <m>19^{16} \equiv 3 \pmod{11}</m>, <m>19^{32} \equiv 9 \pmod{11}</m>. Since <m>53 = 32+16+4+1</m>, <m>19^{53} = 19^{32} 19^{16} 19^{4} 19^{1} \equiv 9 \cdot 3 \cdot 4 \cdot 8 \equiv 6 \pmod{11}</m>.</p>
       </solution>
     </exercise>
 </worksheet>

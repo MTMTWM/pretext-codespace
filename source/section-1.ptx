@@ -7,6 +7,12 @@
       <p>
         here it is
       </p>
+      <p>Below is a Python program; the <code xml:lang="python">xml:lang</code> attribute
+         tells PreTeXt what language to use for syntax highlighting.</p>
+      <programlisting xml:lang="python">
+for i in range(5):
+    print(i)
+      </programlisting>
     </statement>
   </exercise>
 </exercises>
