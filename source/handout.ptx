@@ -39,7 +39,13 @@ Therefore, <m>n|ac-bd</m>, showing that <m>ac \equiv bd \pmod{n}</m>.</p>
         <p>Let <m>n = p_1^{e_1} p_2^{e_2} \cdots p_k^{e_k}</m> be the prime factorization of <m>n</m>. How many positive divisors does <m>n</m> have? Explain your answer.</p>
       </statement>
       <solution>
-        <p>A divisor of <m>n</m> must be of the form <m>p_1^{f_1} p_2^{f_2} \cdots p_k^{f_k}</m>, where <m>0 \le f_i \le e_i</m> for each <m>i=1,2,\dots,k</m>. There are <m>e_i+1</m> choices for each <m>f_i</m>. Therefore, the total number of divisors is <m>(e_1+1)(e_2+1)\cdots(e_k+1)</m>.</p>
+        <p>By Theorem 2.12, a divisor of <m>n</m> must be of the form 
+          <m>p_1^{f_1} p_2^{f_2} \cdots p_k^{f_k}</m>, where 
+          <m>0 \le f_i \le e_i</m> for each <m>i=1,2,\dots,k</m>. 
+          There are <m>e_i+1</m> choices for each <m>f_i</m>. Each of these
+          divisors is unique because they have a distinct prime factorization. 
+          Therefore, the total number of divisors is 
+          <m>(e_1+1)(e_2+1)\cdots(e_k+1)</m>.</p>
       </solution>
     </exercise>
     <exercise xml:id="ex-5">
